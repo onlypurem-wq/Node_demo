@@ -15,7 +15,7 @@ app.post('/api/products', (req, res) =>{
     res.send('Data received')
 })
 
-mongoose.connect('mongodb+srv://onimercy162_db_user:Backend_practice@cluster0.0mgi4be.mongodb.net/nodePractice=Cluster0')
+mongoose.connect(process.env.Mongo_URI)
 .then(() => {
     console.log('Connected!');
 })
